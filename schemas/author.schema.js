@@ -1,4 +1,4 @@
-import Joi from 'joi-id'
+import Joi from 'joi-oid'
 
 const schema = Joi.object({
   name: Joi.string().min(3).max(15).required(),
@@ -7,8 +7,7 @@ const schema = Joi.object({
   country: Joi.string().min(3).max(10).required(),
   date: Joi.date().required(),
   photo: Joi.string().required(),
-  user_id: Joi.objectId().required(),
-  active: Joi.boolean().required()
+  user_id: Joi.string().required()
 })
 
 export default schema
