@@ -5,7 +5,7 @@
  */
 
 import app from'../app.js';
-import debug from'debug';//
+import debug from'debug';
 const logger = debug('minga-backend:server');
 import http from'http';
 
