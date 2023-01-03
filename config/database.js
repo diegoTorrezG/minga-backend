@@ -1,6 +1,13 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
+
+const options = {
+    useUnifiedTopology: true,
+    useNewUrlParse: true
+}
 
 mongoose.set('strictQuery', false)
-mongoose.connect(process.env.MONGO_URI)
+
+
+mongoose.connect(process.env.MONGO_URI,options)
     .then(() => console.log('database connected'))
     .catch(err => console.log(err))
