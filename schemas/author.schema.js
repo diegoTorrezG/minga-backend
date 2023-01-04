@@ -5,6 +5,7 @@ const schema = Joi.object({
   last_name: Joi.string().min(3).max(15),
   city: Joi.string().min(3).max(15).required(),
   country: Joi.string().min(3).max(10).required(),
+  date: Joi.date(),
   photo: Joi.string().uri().required(),
   user_id: Joi.objectId().required()
 })
