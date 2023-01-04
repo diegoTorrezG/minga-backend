@@ -1,3 +1,4 @@
+import chapters from './chapter.js'
 import users from './users.js'
 import express from 'express'
 let router = express.Router()
@@ -8,5 +9,7 @@ router.get('/', function(req, res, next) {
 })
 
 router.use('/auth',users)
+router.use('/chapters',chapters)
+
 
 export default router
