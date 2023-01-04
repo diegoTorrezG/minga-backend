@@ -1,15 +1,15 @@
 import mongoose from 'mongoose'
 
-const comicSchema = Joi.object({
+const Comics = new mongoose.Schema({
     author_id: {type: mongoose.Types.ObjectId, require: true},
     company_id: {type: mongoose.Types.ObjectId, require: true},
-    title: {type: string,required: true},
-    photo: {type: string,required: true},
-    description: {type: string,required: true},
+    title: {type: String,required: true},
+    photo: {type: String,required: true},
+    description: {type: String,required: true},
     category: {type: mongoose.Types.ObjectId, require: true}
 },{
     timestamps: true
 }
 )
 
-export const Comic = mongoose.model('categories', comicSchema)
+export const Comic = mongoose.model('comics', Comics)

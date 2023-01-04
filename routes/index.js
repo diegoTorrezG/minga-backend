@@ -1,4 +1,5 @@
 import users from './users.js'
+import comics from './comics.js'
 import express from 'express'
 let router = express.Router()
 
@@ -7,6 +8,7 @@ router.get('/', function(req, res, next) {
   res.send('minga server ready')
 })
 
+router.use('/comics', comics)
 router.use('/auth',users)
 
 export default router
