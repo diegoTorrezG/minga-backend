@@ -1,3 +1,4 @@
+import chapters from './chapter.js'
 import users from './users.js'
 import authors from './authors.js'
 import comics from './comics.js'
@@ -9,8 +10,10 @@ router.get('/', function(req, res, next) {
   res.send('minga server ready')
 })
 
-router.use('/comics', comics)
 router.use('/auth',users)
+router.use('/comics', comics)
 router.use('/authors', authors)
+router.use('/chapters',chapters)
+
 
 export default router
