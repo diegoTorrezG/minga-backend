@@ -15,4 +15,4 @@ const schema = new mongoose.Schema(
     }
 )
 
-export const Category = mongoose.model('categories', schema)
+export const Author = mongoose.model('authors', schema)
