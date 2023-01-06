@@ -1,14 +1,13 @@
 import Joi from 'joi-oid'
 
 const schema = Joi.object({
-  name: Joi.string().min(3).max(15).required().messages({
+  name: Joi.string().min(2).max(15).required().messages({
     'any.required': 'Name is require',
     'string.empty': 'Name can not be empty',
     'string.min': 'Name is too short',
     'string.max': 'Name is too long',
     }),
-  last_name: Joi.string().min(3).max(15).messages({
-    'string.min': 'Last name is too short',
+  last_name: Joi.string().min(0).max(15).messages({
     'string.max': 'Last name is too long',
     }),
   city: Joi.string().min(3).max(15).required().messages({
@@ -29,7 +28,7 @@ const schema = Joi.object({
     'string.empty': 'Photo can not be empty',
     'string.uri': 'Photo need to be an url',
     }),
-  user_id: Joi.objectId().required()
+  user_id: Joi.objectId().required(),
 })
 
 export default schema
